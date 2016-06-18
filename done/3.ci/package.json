@@ -1,0 +1,23 @@
+{
+  "name": "testing-in-ci",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.0.1",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
