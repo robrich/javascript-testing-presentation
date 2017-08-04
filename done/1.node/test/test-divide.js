@@ -16,26 +16,25 @@ describe('divide', function () {
 		expect(actual).to.equal(expected);
 	});
 
-	it('should divide 2 and 0', function () {
+	it('should divide 2 and 0', function (done) {
+
 		// arrange
 		var x = 2;
 		var y = 0;
-		var thrown = false;
-		var expected = 'divide by';
+		var expected = 2;
 
 		// act
+		var errored = null;
 		try {
 			var actual = divide(x, y);
-			thrown = false;
 		} catch (err) {
-			thrown = true;
-
-			// assert
-			expect(err).to.exist;
-			expect(err.message).to.contain(expected);
+			errored = err;
 		}
 
-		expect(thrown).to.equal(true);
+		// assert
+		expect(errored.code).to.equal(12345);
+
+		done();
 	});
 
 });

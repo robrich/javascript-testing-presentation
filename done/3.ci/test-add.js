@@ -17,4 +17,19 @@ describe('add', function () {
 
 	});
 
+	it('should add a and b', function () {
+
+		// arrange
+		var x = 'a';
+		var y = 'b';
+		var expected = 'ab';
+
+		// act
+		var actual = add(x, y);
+
+		// assert
+		expect(actual).to.equal(expected);
+
+	});
+
 });

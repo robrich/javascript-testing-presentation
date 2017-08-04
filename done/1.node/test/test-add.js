@@ -29,4 +29,19 @@ describe('add', function () {
 		expect(actual).to.equal(expected);
 	});
 
+	it('should add a+b', function () {
+
+		// arrange
+		var x = 'a';
+		var y = 'b';
+		var expected = 'ab';
+
+		// act
+		var actual = add(x, y);
+
+		// assert
+		expect(actual).to.equal(expected);
+
+	});
+
 });

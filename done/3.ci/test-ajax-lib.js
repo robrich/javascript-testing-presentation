@@ -18,6 +18,7 @@ describe('ajax-lib#getAllRecords', function () {
 
 		// mocks
 		$.ajax = function (opts) {
+			// expect(opts.url).to.equal('/backend/..');
 			opts.success(expected);
 		};
 
@@ -26,6 +27,7 @@ describe('ajax-lib#getAllRecords', function () {
 
 			// assert
 			expect(actual).to.deep.equal(expected);
+			expect(err).to.equal(null);
 
 			done();
 		});
