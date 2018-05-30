@@ -1,16 +1,16 @@
-var expect = require('chai').expect;
-var divide = require('../divide');
+const expect = require('chai').expect;
+const divide = require('../divide');
 
 describe('divide', function () {
 
 	it('should divide 2 and 2', function () {
 		// arrange
-		var x = 2;
-		var y = 2;
-		var expected = 1;
+		let x = 2;
+		let y = 2;
+		let expected = 1;
 
 		// act
-		var actual = divide(x, y);
+		let actual = divide(x, y);
 
 		// assert
 		expect(actual).to.equal(expected);
@@ -19,14 +19,14 @@ describe('divide', function () {
 	it('should divide 2 and 0', function (done) {
 
 		// arrange
-		var x = 2;
-		var y = 0;
-		var expected = 2;
+		let x = 2;
+		let y = 0;
+		let expected = 2;
 
 		// act
-		var errored = null;
+		let errored = null;
 		try {
-			var actual = divide(x, y);
+			let actual = divide(x, y);
 		} catch (err) {
 			errored = err;
 		}

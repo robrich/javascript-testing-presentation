@@ -1,5 +1,5 @@
 function subtract(x, y, cb) {
-	var answer = x - y;
+	let answer = x - y;
 	cb(null, answer);
 }
 

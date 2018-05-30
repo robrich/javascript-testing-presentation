@@ -1,14 +1,14 @@
-var expect = require('chai').expect;
-var multiply = require('../multiply');
+const expect = require('chai').expect;
+const multiply = require('../multiply');
 
 describe('multiply', function () {
 
 	it('should multiply 2 and 2', function (done) {
 
 		// arrange
-		var x = 2;
-		var y = 2;
-		var expected = 4;
+		let x = 2;
+		let y = 2;
+		let expected = 4;
 
 		// act
 		multiply(x, y).then(function (actual) {
@@ -24,9 +24,9 @@ describe('multiply', function () {
 	it('should multiply 2 and 3', function () {
 
 		// arrange
-		var x = 2;
-		var y = 3;
-		var expected = 6;
+		let x = 2;
+		let y = 3;
+		let expected = 6;
 
 		// act
 		return multiply(x, y).then(function (actual) {
@@ -40,12 +40,12 @@ describe('multiply', function () {
 	it('should multiply 2 and 5', async function () {
 
 		// arrange
-		var x = 2;
-		var y = 5;
-		var expected = 10;
+		let x = 2;
+		let y = 5;
+		let expected = 10;
 
 		// act
-		var actual = await multiply(x, y);
+		let actual = await multiply(x, y);
 
 		// assert
 		expect(actual).to.equal(expected);

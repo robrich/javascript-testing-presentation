@@ -1,8 +1,9 @@
-var expect = chai.expect;
+(function () {
+const expect = chai.expect;
 
 describe('ajax-lib#getAllRecords', function () {
 
-	var realAjax;
+	let realAjax;
 	beforeEach(function () {
 		realAjax = $.ajax;
 	});
@@ -13,8 +14,8 @@ describe('ajax-lib#getAllRecords', function () {
 	it('should get all results', function (done) {
 
 		// arrange
-		var id = 5;
-		var expected = [{one:'one'}];
+		let id = 5;
+		let expected = [{one:'one'}];
 
 		// mocks
 		$.ajax = function (opts) {
@@ -34,3 +35,4 @@ describe('ajax-lib#getAllRecords', function () {
 	});
 
 });
+}());

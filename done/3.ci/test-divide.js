@@ -1,16 +1,17 @@
-var expect = chai.expect;
+(function () {
+const expect = chai.expect;
 
 describe('divide', function () {
 
 	it('should divide 2 and 2', function () {
 
 		// arrange
-		var x = 2;
-		var y = 2;
-		var expected = 1;
+		let x = 2;
+		let y = 2;
+		let expected = 1;
 
 		// act
-		var actual = divide(2, 2);
+		let actual = divide(2, 2);
 
 		// assert
 		expect(actual).to.equal(expected);
@@ -20,14 +21,14 @@ describe('divide', function () {
 	it('should divide 2 and 0', function (done) {
 
 		// arrange
-		var x = 2;
-		var y = 0;
-		var expected = 12345;
+		let x = 2;
+		let y = 0;
+		let expected = 12345;
 
 		// act
-		var errored = null;
+		let errored = null;
 		try {
-			var actual = divide(x, y);
+			let actual = divide(x, y);
 		} catch (err) {
 			errored = err;
 		}
@@ -39,3 +40,4 @@ describe('divide', function () {
 	});
 
 });
+}());
