@@ -10,10 +10,10 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
-    "jquery": "^3.0.0"
+    "jquery": "^3.3.1"
   }
 }
