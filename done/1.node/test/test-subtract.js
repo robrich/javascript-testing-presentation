@@ -1,23 +1,44 @@
-const expect = require('chai').expect;
-const subtract = require('../subtract');
+import chai from 'chai';
+import subtract from '../subtract.js';
 
 describe('subtract', function () {
 
-	it('should subtract 2 and 2', function (done) {
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 0;
+  const expect = chai.expect;
 
-		// act
-		subtract(x, y, function (err, actual) {
+  it('should subtract 2 and 2', function (done) {
 
-			// assert
-			expect(actual).to.equal(expected);
-			expect(err).to.be.null;
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 0;
 
-			done();
-		});
-	});
+    // act
+    subtract(x, y, function (err, actual) {
+
+      // assert
+      expect(actual).to.equal(expected);
+      expect(err).to.equal(null);
+
+      done();
+    });
+  });
+
+  it('should subtract 3 and 1', function (done) {
+
+    // arrange
+    const x = 3;
+    const y = 1;
+    const expected = 2;
+
+    // act
+    subtract(x, y, function (err, actual) {
+
+      // assert
+      expect(actual).to.equal(expected);
+      expect(err).to.equal(null);
+
+      done();
+    });
+  });
 
 });

@@ -1,6 +1,4 @@
-function subtract(x, y, cb) {
-	let answer = x - y;
-	cb(null, answer);
+export default function subtract(x, y, cb) {
+  let answer = x - y;
+  cb(null, answer);
 }
-
-module.exports = subtract;

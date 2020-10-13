@@ -1,37 +1,52 @@
 (function () {
-const expect = chai.expect;
 
 describe('add', function () {
 
-	it('should add 2 and 2', function () {
+  const expect = chai.expect;
 
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 4;
+  it('should add 2 and 2', function () {
 
-		// act
-		let actual = add(2, 2);
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 4;
 
-		// assert
-		expect(actual).to.equal(expected);
+    // act
+    const actual = add(x, y);
 
-	});
+    // assert
+    expect(actual).to.equal(expected);
 
-	it('should add a and b', function () {
+  });
 
-		// arrange
-		let x = 'a';
-		let y = 'b';
-		let expected = 'ab';
+  it('should add "hello" and "world"', function () {
 
-		// act
-		let actual = add(x, y);
+    // arrange
+    const x = "hello";
+    const y = "world";
+    const expected = "helloworld";
 
-		// assert
-		expect(actual).to.equal(expected);
+    // act
+    const actual = add(x, y);
 
-	});
+    // assert
+    expect(actual).to.equal(expected);
+  });
+
+  it('should add a and b', function () {
+
+    // arrange
+    const x = 'a';
+    const y = 'b';
+    const expected = 'ab';
+
+    // act
+    const actual = add(x, y);
+
+    // assert
+    expect(actual).to.equal(expected);
+
+  });
 
 });
 }());

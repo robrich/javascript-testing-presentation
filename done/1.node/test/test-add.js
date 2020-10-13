@@ -1,47 +1,52 @@
-const expect = require('chai').expect;
-const add = require('../add');
+import chai from 'chai';
+import add from '../add.js';
 
 describe('add', function () {
 
-	it('should add 2 and 2', function () {
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 4;
+  const expect = chai.expect;
 
-		// act
-		let actual = add(x, y);
+  it('should add 2 and 2', function () {
 
-		// assert
-		expect(actual).to.equal(expected);
-	});
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 4;
 
-	it('should add "hello" and "world"', function () {
-		// arrange
-		let x = "hello";
-		let y = "world";
-		let expected = "helloworld";
+    // act
+    const actual = add(x, y);
 
-		// act
-		let actual = add(x, y);
+    // assert
+    expect(actual).to.equal(expected);
 
-		// assert
-		expect(actual).to.equal(expected);
-	});
+  });
 
-	it('should add a+b', function () {
+  it('should add "hello" and "world"', function () {
 
-		// arrange
-		let x = 'a';
-		let y = 'b';
-		let expected = 'ab';
+    // arrange
+    const x = "hello";
+    const y = "world";
+    const expected = "helloworld";
 
-		// act
-		let actual = add(x, y);
+    // act
+    const actual = add(x, y);
 
-		// assert
-		expect(actual).to.equal(expected);
+    // assert
+    expect(actual).to.equal(expected);
+  });
 
-	});
+  it('should add a and b', function () {
+
+    // arrange
+    const x = 'a';
+    const y = 'b';
+    const expected = 'ab';
+
+    // act
+    const actual = add(x, y);
+
+    // assert
+    expect(actual).to.equal(expected);
+
+  });
 
 });

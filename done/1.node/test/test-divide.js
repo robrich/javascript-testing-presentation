@@ -1,40 +1,43 @@
-const expect = require('chai').expect;
-const divide = require('../divide');
+import chai from 'chai';
+import divide from '../divide.js';
 
 describe('divide', function () {
 
-	it('should divide 2 and 2', function () {
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 1;
+  const expect = chai.expect;
 
-		// act
-		let actual = divide(x, y);
+  it('should divide 2 and 2', function () {
 
-		// assert
-		expect(actual).to.equal(expected);
-	});
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 1;
 
-	it('should divide 2 and 0', function (done) {
+    // act
+    const actual = divide(x, y);
 
-		// arrange
-		let x = 2;
-		let y = 0;
-		let expected = 2;
+    // assert
+    expect(actual).to.equal(expected);
 
-		// act
-		let errored = null;
-		try {
-			let actual = divide(x, y);
-		} catch (err) {
-			errored = err;
-		}
+  });
 
-		// assert
-		expect(errored.code).to.equal(12345);
+  it('should divide 2 and 0', function () {
 
-		done();
-	});
+    // arrange
+    const x = 2;
+    const y = 0;
+    const expectedCode = 12345;
+
+    // act
+    let actual = null;
+    try {
+      divide(x, y);
+    } catch (err) {
+      actual = err;
+    }
+
+    // assert
+    expect(actual.code).to.equal(expectedCode);
+
+  });
 
 });

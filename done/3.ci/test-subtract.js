@@ -1,24 +1,45 @@
 (function () {
-const expect = chai.expect;
 
 describe('subtract', function () {
 
-	it('should subtract 2 and 2', function (done) {
+  const expect = chai.expect;
 
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 0;
+  it('should subtract 2 and 2', function (done) {
 
-		// act
-		subtract(2, 2, function (err, actual) {
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 0;
 
-			// assert
-			expect(actual).to.equal(expected);
+    // act
+    subtract(x, y, function (err, actual) {
 
-			done();
-		});
-	});
+      // assert
+      expect(actual).to.equal(expected);
+      expect(err).to.equal(null);
+
+      done();
+    });
+  });
+
+  it('should subtract 3 and 1', function (done) {
+
+    // arrange
+    const x = 3;
+    const y = 1;
+    const expected = 2;
+
+    // act
+    subtract(x, y, function (err, actual) {
+
+      // assert
+      expect(actual).to.equal(expected);
+      expect(err).to.equal(null);
+
+      done();
+    });
+  });
 
 });
 }());
+

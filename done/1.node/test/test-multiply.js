@@ -1,55 +1,58 @@
-const expect = require('chai').expect;
-const multiply = require('../multiply');
+import chai from 'chai';
+import multiply from '../multiply.js';
 
 describe('multiply', function () {
 
-	it('should multiply 2 and 2', function (done) {
+  const expect = chai.expect;
 
-		// arrange
-		let x = 2;
-		let y = 2;
-		let expected = 4;
+  it('should multiply 2 and 2', function (done) {
 
-		// act
-		multiply(x, y).then(function (actual) {
+    // arrange
+    const x = 2;
+    const y = 2;
+    const expected = 4;
 
-			// assert
-			expect(actual).to.equal(expected);
+    // act
+    multiply(x, y)
+      .then(function (actual) {
 
-			done()
-		}).catch(done);
+        // assert
+        expect(actual).to.equal(expected);
 
-	});
+        done();
+      });
+  });
 
-	it('should multiply 2 and 3', function () {
+  it('should multiply 2 and 3', function () {
 
-		// arrange
-		let x = 2;
-		let y = 3;
-		let expected = 6;
+    // arrange
+    const x = 2;
+    const y = 3;
+    const expected = 6;
 
-		// act
-		return multiply(x, y).then(function (actual) {
+    // act
+    return multiply(x, y)
+      .then(function (actual) {
 
-			// assert
-			expect(actual).to.equal(expected);
+        // assert
+        expect(actual).to.equal(expected);
 
-		});
-	});
+      });
+  });
 
-	it('should multiply 2 and 5', async function () {
+  it('should multiply 2 and 5', async function () {
 
-		// arrange
-		let x = 2;
-		let y = 5;
-		let expected = 10;
+    // arrange
+    const x = 2;
+    const y = 3;
+    const expected = 6;
 
-		// act
-		let actual = await multiply(x, y);
+    // act
+    const actual = await multiply(x, y);
 
-		// assert
-		expect(actual).to.equal(expected);
+    // assert
+    expect(actual).to.equal(expected);
 
-	});
+  });
 
 });
