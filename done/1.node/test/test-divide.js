@@ -25,7 +25,7 @@ describe('divide', function () {
     // arrange
     const x = 2;
     const y = 0;
-    const expectedCode = 12345;
+    const expected = 'DIVIDE_BY_ZERO';
 
     // act
     let actual = null;
@@ -36,7 +36,7 @@ describe('divide', function () {
     }
 
     // assert
-    expect(actual.code).to.equal(expectedCode);
+    expect(actual?.code).to.equal(expected);
 
   });
 
